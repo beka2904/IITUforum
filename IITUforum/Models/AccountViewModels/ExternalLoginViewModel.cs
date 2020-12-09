@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
 namespace IITUforum.Models.AccountViewModels
 {
     public class ExternalLoginViewModel

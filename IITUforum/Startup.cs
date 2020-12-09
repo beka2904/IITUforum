@@ -13,6 +13,7 @@ using IITUforum.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using IITUforum.Data.Models;
+using IITUforum.Services;
 
 namespace IITUforum
 {
@@ -42,6 +43,8 @@ namespace IITUforum
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddTransient<IEmailSender, EmailSender>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -51,6 +54,7 @@ namespace IITUforum
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
                 app.UseDatabaseErrorPage();
             }
             else
