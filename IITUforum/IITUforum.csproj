@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IITUforum.Data\IITUforum.Data.csproj" />
+    <ProjectReference Include="..\IITUforum.Service\IITUforum.Service.csproj" />
   </ItemGroup>
 
 </Project>

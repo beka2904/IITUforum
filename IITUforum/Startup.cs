@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using IITUforum.Data.Models;
 using IITUforum.Services;
+using IITUforum.Service;
 
 namespace IITUforum
 {
@@ -44,6 +45,7 @@ namespace IITUforum
                 .AddDefaultTokenProviders();
 
             services.AddTransient<IEmailSender, EmailSender>();
+            services.AddScoped<IForum, ForumService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
