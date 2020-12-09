@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IITUforum", "IITUforum\IITUforum.csproj", "{DC89A2CD-F035-4FC1-9E22-1413525D2DF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IITUforum.Data", "IITUforum.Data\IITUforum.Data.csproj", "{50B6EE4A-5590-40F0-BC23-A27017670DE9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IITUforum.Data", "IITUforum.Data\IITUforum.Data.csproj", "{50B6EE4A-5590-40F0-BC23-A27017670DE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IITUforum.Service", "IITUforum.Service\IITUforum.Service.csproj", "{C7C0B490-D309-4C0B-8287-24B301B1403B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{50B6EE4A-5590-40F0-BC23-A27017670DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50B6EE4A-5590-40F0-BC23-A27017670DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50B6EE4A-5590-40F0-BC23-A27017670DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C0B490-D309-4C0B-8287-24B301B1403B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C0B490-D309-4C0B-8287-24B301B1403B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C0B490-D309-4C0B-8287-24B301B1403B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C0B490-D309-4C0B-8287-24B301B1403B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
