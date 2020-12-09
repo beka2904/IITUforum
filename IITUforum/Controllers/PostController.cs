@@ -70,7 +70,7 @@ namespace IITUforum.Controllers
             var user = _userManager.FindByIdAsync(userId).Result;
             var post = BuildPost(model, user);
 
-            _postService.Add(post).Wait(); 
+            await _postService.Add(post); 
             //нужно будет добавить User Rating
             return RedirectToAction("Index", "Post", new { id = post.Id });
         }
