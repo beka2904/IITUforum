@@ -4,7 +4,7 @@
 <div class="container body-content">
     <div class="row sectionHeader">
         <div class="sectionHeading">
-            <span>Search Results for:<b>@Model.SearchQuery</b></span>
+            <span>Search Results for: <b>@Model.SearchQuery</b></span>
             <form asp-controller="Search" asp-action="Search" method="post">
                 <div class="searchForm">
                     <input asp-for="SearchQuery" type="text" placeholder="Search..." class="searchBar" onfocus="clearThis(this)" />
