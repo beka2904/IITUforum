@@ -137,6 +137,21 @@ body {
 }
 
 
+.searchBar{
+    padding: 3px 5px 2px 12px;
+    margin: 8px;
+    background-color: #333;
+    width: 10%;
+    transition: ease .3s;
+    border:none;
+}
+
+.searchBar:focus{
+    color:black;
+    width: 60%;
+    background-color: #fff;
+}
+
 
 .postTitle{
     font-family: 'Roboto';
@@ -286,6 +301,12 @@ body {
     color: #fff !important;
 }
 
+.btn-forumSearch{
+    background:none !important;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+}
 
 #forumIndexTable td{
     background-color: rgba(255,255,255,0.9);
