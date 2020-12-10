@@ -16,4 +16,10 @@
     <ProjectReference Include="..\IITUforum.Service\IITUforum.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\theme\" />
+    <Folder Include="wwwroot\images\forum\" />
+    <Folder Include="wwwroot\images\users\" />
+  </ItemGroup>
+
 </Project>
