@@ -46,6 +46,8 @@ namespace IITUforum.Controllers
 
             };
 
+            return View(model);
+
         }
 
         private ForumListingModel BuildForumListing(Post post)
