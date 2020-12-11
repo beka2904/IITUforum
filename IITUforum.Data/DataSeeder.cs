@@ -28,21 +28,21 @@ namespace IITUforum.Data
             {
                 UserName = "ForumAdmin",
                 NormalizedUserName = "forumadmin",
-                Email = "admin@iituforum.kz",
-                NormalizedEmail = "admin@iituforum.kz",
+                Email = "admin@gmail.com",
+                NormalizedEmail = "admin@gmail.com",
                 EmailConfirmed = true,
                 LockoutEnabled = false,
                 SecurityStamp = Guid.NewGuid().ToString()
             };
 
             var hasher = new PasswordHasher<ApplicationUser>();
-            var hashedPassword = hasher.HashPassword(user, "admin");
+            var hashedPassword = hasher.HashPassword(user, "1234");
             user.PasswordHash = hashedPassword;
 
             var hasAdminRole = _context.Roles.Any(roles => roles.Name == "Admin");
             if(!hasAdminRole)
             {
-                roleStore.CreateAsync(new IdentityRole 
+               roleStore.CreateAsync(new IdentityRole 
                 { 
                     Name = "Admin", 
                     NormalizedName = "admin" 
@@ -60,6 +60,7 @@ namespace IITUforum.Data
 
             _context.SaveChangesAsync();
             return Task.CompletedTask;
+            
         }
     }
 }
