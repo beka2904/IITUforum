@@ -14,6 +14,8 @@ This is <strong>IITUforum</strong> Application with:
 
 * <b>Post Content Search</b>
 
+* <b>Blob containers(Azure)</b>
+
 * <b>Bootstrap, Custom CSS</b>
 
 * <b>Unit testing with NUnit soon...</b> 
