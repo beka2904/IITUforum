@@ -192,7 +192,7 @@ body {
     height:80px;
     width:80px;
     background-size:100%;
-    /*border-radius: 40px;*/
+    border-radius: 40px;
 }
 
 
@@ -209,6 +209,13 @@ body {
 
 }
 
+.postContent {
+    margin-top: 12px;
+    font-family:'Minion Pro';
+    font-size: 14px;
+
+}
+
 .postContentContainer{
     font-family: 'Roboto';
     color: #222;
@@ -222,15 +229,18 @@ body {
     font-family:'Roboto Mono';
 }
 
-#postIndexContent{
-    background-color:white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.3);
-    
+#postIndexContent {
+    margin-top: 7px;
+    background-color: white;
+    /*box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 6px 6px rgba(0,0,0,0.3);*/
+    box-shadow: 5px 8px #888888;
+    border-radius: 10px;
 }
 
 .postHeader{
     background-color: #212121;
     padding: 8px 0px 24px 24px;
+    border-radius:0 0 10px 10px;
 }
 
 #headingBtn{
@@ -255,6 +265,7 @@ body {
     color: #fff !important;
     transition: ease-in 0.1s;
     border-radius: 0px !important;
+    margin-top: 14px;
 }
 
 .btn-newReply:hover {
@@ -372,7 +383,12 @@ body {
     padding-top: 30px;
     font-family: 'Roboto Slab';
 }
-
+.noReplies {
+    font-size: large;
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Roboto Slab';
+}
 .userProfile{
     padding: 32px 0 64px 24px;
     background-color: #fff;
@@ -408,9 +424,39 @@ body {
 }
 
 
+.replyContent {
+    display: table;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    width: inherit;
+    border-radius: 10px;
+    box-shadow: 5px 8px #888888;
+    margin-top: 12px;
+}
 
- 
 
+.replyAuthorContainer {
+    display: table-cell;
+    padding: 12px;
+    color: #444;
+    font-family: 'Roboto';
+    width: 190px;
+}
+
+
+.replyContentContainer {
+    padding: 12px;
+    border-left: 1px solid #eee;
+}
+
+
+.isAdmin {
+    display: inline-block;
+    padding: 3px;
+    background-color: #FFEB3B;
+    color: black;
+    font-family: 'Roboto Mono';
+}
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
