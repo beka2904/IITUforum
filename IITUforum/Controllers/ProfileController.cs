@@ -56,7 +56,7 @@ namespace IITUforum.Controllers
         {
             var userId = _userManager.GetUserId(User);
             var connectionString = _configuration.GetConnectionString("AzureStorageAccount");
-            var container = _uploadService.GetBlobContainer(connectionString);
+            var container = _uploadService.GetBlobContainer(connectionString,"profile-images");
             var contentDisposition = ContentDispositionHeaderValue.Parse(file.ContentDisposition);
             var filename = contentDisposition.FileName.Trim('"');
 
