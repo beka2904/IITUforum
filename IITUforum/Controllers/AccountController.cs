@@ -232,7 +232,8 @@ namespace IITUforum.Controllers
                     { 
                         UserName = model.UserName, 
                         Email = model.Email, 
-                        MemberSince = DateTime.Now 
+                        MemberSince = DateTime.Now,
+                        ProfileImageUrl = "https://iituforum.blob.core.windows.net/profile-images/default.png"
                     };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
