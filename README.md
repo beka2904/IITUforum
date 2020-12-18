@@ -18,6 +18,6 @@ This is <strong>IITUforum</strong> Application with:
 
 * <b>Bootstrap, Custom CSS</b>
 
-* <b>Unit testing with NUnit soon...</b> 
+* <b>Unit testing with NUnit</b> 
 
 * <b>Lots of features</b>
