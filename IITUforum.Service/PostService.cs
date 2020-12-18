@@ -58,18 +58,25 @@ namespace IITUforum.Service
 
         public IEnumerable<Post> GetFilteredPosts(Forum forum, string searchQuery)
         {
-            return string.IsNullOrEmpty(searchQuery)
+            var normalized = searchQuery.ToLower();
+            return string.IsNullOrEmpty(normalized)
                 ? forum.Posts
                 :forum.Posts
-                .Where(post => post.Title.Contains(searchQuery) 
-            || post.Content.Contains(searchQuery));
+                .Where(post => post.Title.Contains(normalized) 
+            || post.Content.Contains(normalized));
         }
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
         {
+            if(searchQuery==null)
+            {
+                searchQuery = "apoaspfjaajragnap";
+            }
+
+            var normalized = searchQuery.ToLower();
             return GetAll().Where(post
-                => post.Title.Contains(searchQuery)
-                || post.Content.Contains(searchQuery));
+                => post.Title.ToLower().Contains(normalized)
+                || post.Content.ToLower().Contains(normalized));
                 
         }
 
