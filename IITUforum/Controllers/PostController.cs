@@ -6,6 +6,7 @@ using IITUforum.Data;
 using IITUforum.Data.Models;
 using IITUforum.Models.Post;
 using IITUforum.Models.Reply;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -52,7 +53,7 @@ namespace IITUforum.Controllers
         }
 
         
-
+        [Authorize]
         public IActionResult Create(int id)
         {
             //forum id
@@ -71,6 +72,7 @@ namespace IITUforum.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> AddPost(NewPostModel model)
         {
             var userId = _userManager.GetUserId(User);

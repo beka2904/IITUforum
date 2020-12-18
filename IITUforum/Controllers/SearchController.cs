@@ -50,6 +50,12 @@ namespace IITUforum.Controllers
 
         }
 
+        [HttpPost]
+        public IActionResult Search(string searchQuery)
+        {
+            return RedirectToAction("Results", new { searchQuery });
+        }
+
         private ForumListingModel BuildForumListing(Post post)
         {
             var forum = post.Forum;
@@ -63,10 +69,5 @@ namespace IITUforum.Controllers
             };
         }
 
-        [HttpPost]
-        public IActionResult Search(string searchQuery)
-        {
-            return RedirectToAction("Results", new { searchQuery });
-        }
     }
 }

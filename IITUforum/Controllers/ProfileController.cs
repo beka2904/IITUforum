@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using IITUforum.Data;
 using IITUforum.Data.Models;
 using IITUforum.Models.ApplicationUser;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace IITUforum.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
@@ -69,6 +71,7 @@ namespace IITUforum.Controllers
             return RedirectToAction("Detail", "Profile", new { id = userId }); 
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             var profiles = _userService.GetAll()

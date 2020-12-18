@@ -17,8 +17,6 @@ namespace IITUforum.Controllers
     {
         private readonly IPost _postService;
 
-
-
         public HomeController(IPost postService)
         {
             _postService = postService;
@@ -28,6 +26,31 @@ namespace IITUforum.Controllers
         {
             var model = BuildHomeIndexModel();
             return View(model);
+        }
+
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            ViewData["Message"] = "Your contact page.";
+
+            return View();
+        }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
         private HomeIndexModel BuildHomeIndexModel()
@@ -59,33 +82,8 @@ namespace IITUforum.Controllers
             {
                 Id = forum.Id,
                 Name = forum.Title,
-                ImageUrl = forum.ImageUrl  
+                ImageUrl = forum.ImageUrl
             };
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

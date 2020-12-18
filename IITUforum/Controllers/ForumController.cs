@@ -2,6 +2,7 @@
 using IITUforum.Data.Models;
 using IITUforum.Models.Forum;
 using IITUforum.Models.Post;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -82,7 +83,8 @@ namespace IITUforum.Controllers
         {
             return RedirectToAction("Topic", new { id, searchQuery });
         }
-        
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             var model = new AddForumModel();
@@ -90,6 +92,7 @@ namespace IITUforum.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddForum(AddForumModel model)
         {
             var imageUri = "/images/users/default.png";
