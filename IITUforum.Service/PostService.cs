@@ -58,12 +58,12 @@ namespace IITUforum.Service
 
         public IEnumerable<Post> GetFilteredPosts(Forum forum, string searchQuery)
         {
-            var normalized = searchQuery.ToLower();
-            return string.IsNullOrEmpty(normalized)
+            
+            return string.IsNullOrEmpty(searchQuery)
                 ? forum.Posts
                 :forum.Posts
-                .Where(post => post.Title.Contains(normalized) 
-            || post.Content.Contains(normalized));
+                .Where(post => post.Title.Contains(searchQuery) 
+            || post.Content.Contains(searchQuery));
         }
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
