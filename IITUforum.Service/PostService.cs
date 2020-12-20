@@ -68,11 +68,10 @@ namespace IITUforum.Service
 
         public IEnumerable<Post> GetFilteredPosts(string searchQuery)
         {
-            if(searchQuery==null)
-            {
-                searchQuery = "apoaspfjaajragnap";
-            }
-
+            //if(searchQuery==null)
+            //{
+            //    searchQuery = "apoaspfjaajragnap";
+            //}
             var normalized = searchQuery.ToLower();
             return GetAll().Where(post
                 => post.Title.ToLower().Contains(normalized)

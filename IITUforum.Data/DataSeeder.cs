@@ -22,8 +22,6 @@ namespace IITUforum.Data
             var roleStore = new RoleStore<IdentityRole>(_context);
             var userStore = new UserStore<ApplicationUser>(_context);
 
-            
-
             var user = new ApplicationUser
             {
                 UserName = "ForumAdmin",

@@ -4,7 +4,7 @@ body {
     padding: 50px 0 20px 0;
     background-color: #EEE;
     background-image: url("/images/theme/bg-05.jpg");
-    background-size:100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -18,10 +18,11 @@ body {
 .navLogo {
     background-image: url("/images/app-logo-s.png");
     background-size: 100%;
+    display: inline-block;
     background-repeat: no-repeat;
     background-position: center;
     padding-right: 16px;
-    width: 150px;
+    width: 160px;
     margin-right: 12px;
 }
 
@@ -58,8 +59,8 @@ body {
 }
 
 .frontPageSplash{
-    background-image:url("/images/theme/bg-04.jpg");
-    /*opacity: 0.75;*/
+    background-image:url("/images/theme/front-splash-ideal.jpg");
+    background-size:100%;
     background-repeat:no-repeat;
     background-position: right;
 }
@@ -84,7 +85,7 @@ body {
 }
 
 .frontPageSubHeading{
-    font-size: 2em;
+    font-size: 1.6em;
 
 }
 
@@ -97,7 +98,7 @@ body {
 
 
 .homeSearch{
-    width:100%;
+    width:95%;
     margin-top:8px;
     background:rgba(0,0,0,0.1);
     padding:8px;
